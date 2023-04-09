@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Github User</string>
+    <string name="search">Search</string>
+    <string name="defus">mumtaz</string>
+    <string name="QH">Search User</string>
+    <string name="failed_to_load_page">Failed!!</string>
+    <string name="submit">submit</string>
+    <string name="settings">Settings</string>
+    <string name="dark_mode">Dark Mode</string>
+    <string name="favorite">Favorite</string>
+
+</resources>

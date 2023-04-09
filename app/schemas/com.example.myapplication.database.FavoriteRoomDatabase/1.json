@@ -1,0 +1,40 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 1,
+    "identityHash": "d31fe4cbbeffeb5d6f467756f73b2448",
+    "entities": [
+      {
+        "tableName": "favorite",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`username` TEXT NOT NULL, `avatarUrl` TEXT, PRIMARY KEY(`username`))",
+        "fields": [
+          {
+            "fieldPath": "username",
+            "columnName": "username",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "avatarUrl",
+            "columnName": "avatarUrl",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "username"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "views": [],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'd31fe4cbbeffeb5d6f467756f73b2448')"
+    ]
+  }
+}
